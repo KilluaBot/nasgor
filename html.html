@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple TikTok Downloader</title>
+  </head>
+<input class="form-copy" id="text-link" placeholder="Paste Your Url Tiktok Here">
+<button class="btn btn-copy btn-circle" onclick="download()">
+    <span class="fa fa-copy"></span> DOWNLOAD NOWM
+</button>
+
+<style>
+    	.form-copy {
+	    height: 60px;
+	    margin: 0px;
+	    width: 100%;
+	    padding: 0 14px;
+	    border: solid 1px #bfbfbf;
+	    background: #f9f9f9;
+		border-radius: 5px;
+	}
+
+	button.btn-copy{
+		padding: 20px 10px;	
+		color: #fff;
+		background-color: #5cb85c;
+		border-color: #419641;
+		border-top: solid 2px #84d884;
+		border-left: solid 2px #84d884;
+		border-right: solid 2px #419641;
+		border-bottom: solid 2px #419641;
+	}
+	button.btn-copy:hover{
+		background-color: #419641;
+	}
+	input#code:focus {
+	    outline: none!important;
+	}
+	.btn-circle {
+		border-radius: 50%;
+		position: relative;
+		top: -29px; 
+		float: right; 
+		border-color: #5cb85c;
+	}
+</style>
+<script>
+    function download() {  
+    var puseng = document.getElementById("text-link").value;
+    window.location = 'https://fatiharridho.herokuapp.com/api/downloader/tiktok/nowm?url=' + puseng
+}
+</script>
+</html>
